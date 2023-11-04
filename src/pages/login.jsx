@@ -1,19 +1,18 @@
 import React from 'react'
 import Navbar from '../components/landing/navbar'
 import Footer from '../components/landing/footer'
-import Landing from '../components/landing/landing'
-import { useUser } from '../util/UserContext'
+import FormularioLogin from '../components/form/formularioLogin'
+import { useUser } from '../util/UserContext';
 
-function Landingpage() {
 
+function LogIn() {
   const {usuario,toggleUsuario} = useUser();
   return (
     <div data-theme="black">
-        <Navbar  usuario={usuario} toggleUsuario={toggleUsuario}/>
-        <Landing />
+        <FormularioLogin  toggleUsuario={toggleUsuario}/>
         <Footer />
     </div>
   )
 }
 
-export default Landingpage
+export default LogIn
